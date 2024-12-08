@@ -1,0 +1,111 @@
+body {
+  background: linear-gradient(135deg, #2a2a72, #6a3093); 
+  color: #e0e0e0; 
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.sell-container {
+  background: rgba(30, 30, 30, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); 
+  width: 50%; 
+  margin: 50px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.sell-container h2 {
+  font-size: 24px;
+  color: #f7f7f7; 
+  margin-bottom: 20px;
+}
+
+
+.sell-container input,
+.sell-container textarea {
+  width: 100%;
+  max-width: 500px; 
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+  text-align: center; 
+}
+
+
+.sell-container .custom-file-upload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+  background: linear-gradient(145deg, #00b3b3, #00ffcc); 
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  width: auto;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); 
+}
+
+.sell-container .custom-file-upload:hover {
+  background: linear-gradient(145deg, #00ffcc, #00b3b3); 
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5); 
+}
+
+.sell-container .custom-file-upload i {
+  margin-right: 8px; 
+  font-size: 20px;
+}
+
+
+.sell-container input[type="file"] {
+  display: none;
+}
+
+
+.sell-container button[type="submit"] {
+  padding: 15px 40px;
+  background: linear-gradient(145deg, #ff0066, #ff6699); 
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 500px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); 
+  margin-top: 20px;
+}
+
+.sell-container button[type="submit"]:hover {
+  background: linear-gradient(145deg, #ff6699, #ff0066); 
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(255, 102, 102, 0.5); 
+}
+
+
+@media (min-width: 768px) {
+  .sell-container {
+    width: 40%;
+  }
+}
