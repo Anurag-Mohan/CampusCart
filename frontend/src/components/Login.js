@@ -15,12 +15,11 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
-
-
+  
     if (!email || !password) {
       return setError("Both email and password are required.");
     }
-
+  
     try {
       const response = await fetch("http://localhost:5000/auth/login", {
         method: "POST",
@@ -29,17 +28,18 @@ function Login() {
         },
         body: JSON.stringify({ email, password }),
       });
-
+  
       const data = await response.json();
-
+  
       if (response.ok) {
-
         setUser({ id: data.id, username: data.username });
-
-
-        navigate("/home");
+  
+        if (data.is_admin) {
+          navigate("/admin");
+        } else {
+          navigate("/home");
+        }
       } else {
-
         setError(data.message || "Invalid email or password.");
       }
     } catch (err) {
@@ -47,7 +47,7 @@ function Login() {
       setError("Error connecting to the server.");
     }
   };
-
+  
   return (
     <div className="login-container">
       <div className="login-box">

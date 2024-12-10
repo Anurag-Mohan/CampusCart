@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaHome, FaUser, FaStore, FaRegListAlt } from "react-icons/fa";
+import logo from "../assets/logo.png";
 import "../styles/Homepage.css";
 
 function Homepage() {
@@ -7,7 +9,6 @@ function Homepage() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-
     fetch("http://localhost:5000/items/all")
       .then((response) => response.json())
       .then((data) => {
@@ -29,27 +30,32 @@ function Homepage() {
   };
 
   useEffect(() => {
-
     const interval = setInterval(() => {
       moveRight();
     }, 1500);
-
-
     return () => clearInterval(interval);
-  }, [currentIndex, items.length]); 
+  }, [currentIndex, items.length]);
 
   return (
     <div className="homepage-container">
       <nav className="navbar">
+        <img src={logo} alt="Campus Marketplace Logo" className="logo" /> {/* Logo */}
         <h1>Campus Marketplace</h1>
         <div>
-          <Link to="/sell">Sell Item</Link>
-          <Link to="/on-air">On-Air Items</Link>
-          <Link to="/">Form Group</Link>
-          <Link to="/profile">Profile</Link>
+          <Link to="/sell" aria-label="Sell Item">
+            <FaStore size={24} />
+          </Link>
+          <Link to="/on-air" aria-label="On-Air Items">
+            <FaRegListAlt size={24} />
+          </Link>
+          <Link to="/" aria-label="Home">
+            <FaHome size={24} />
+          </Link>
+          <Link to="/profile" aria-label="Profile">
+            <FaUser size={24} />
+          </Link>
         </div>
       </nav>
-
 
       <div className="recent-items-container">
         <button className="arrow-button left" onClick={moveLeft}>&lt;</button>
@@ -65,13 +71,14 @@ function Homepage() {
                 <p><strong>Type:</strong> {items[currentIndex].type}</p>
                 <p>{items[currentIndex].description}</p>
               </div>
-              <button className="buy-now-button">Buy Now</button>
+              <Link to={`/item/${items[currentIndex].id}`}>
+                <button className="buy-now-button">Buy Now</button>
+              </Link>
             </>
           )}
         </div>
         <button className="arrow-button right" onClick={moveRight}>&gt;</button>
       </div>
-
 
       <div className="items-grid">
         {items.map((item) => (
@@ -84,7 +91,9 @@ function Homepage() {
             <p><strong>Type:</strong> {item.type}</p>
             <p>{item.description}</p>
             <p><strong>Price:</strong> ₹{item.price}</p>
-            <button className="buy-now-button">Buy Now</button>
+            <Link to={`/item/${item.id}`}>
+              <button className="buy-now-button">Buy Now</button>
+            </Link>
           </div>
         ))}
       </div>

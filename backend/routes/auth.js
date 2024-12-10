@@ -38,20 +38,21 @@ router.post("/login", async (req, res) => {
     const [results] = await db.execute("SELECT * FROM users WHERE email = ?", [email]);
 
     if (results.length === 0) {
-      return res.status(404).send("User not found");
+      return res.status(404).send({ message: "User not found" });
     }
 
     const user = results[0];
     const isMatch = await bcrypt.compare(password, user.password);
+    console.log("Password match result:", isMatch);
 
     if (!isMatch) {
-      return res.status(401).send("Invalid credentials");
+      return res.status(401).send({ message: "Invalid credentials" });
     }
 
-    res.send({ id: user.id, username: user.username });
+    res.send({ id: user.id, username: user.username, is_admin: user.is_admin });
   } catch (err) {
     console.error("Error during login:", err);
-    res.status(500).send("Internal Server Error");
+    res.status(500).send({ message: "Internal Server Error" });
   }
 });
 
@@ -65,6 +66,28 @@ router.get("/all", async (req, res) => {
     res.status(500).json({ success: false, message: "Server error: " + err.message });
   }
 });
+
+
+router.delete("/delete", async (req, res) => {
+  const { userId } = req.body;
+
+  if (!userId) {
+    return res.status(400).json({ success: false, message: "User ID is required." });
+  }
+
+  try {
+    const result = await db.query("DELETE FROM users WHERE id = ?", [userId]);
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ success: false, message: "User not found." });
+    }
+
+    res.status(200).json({ success: true, message: "User deleted successfully." });
+  } catch (err) {
+    console.error("Error deleting user:", err);
+    res.status(500).json({ success: false, message: "Error deleting user." });
+  }
+});
+
 
 
 module.exports = router;

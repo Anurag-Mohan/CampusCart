@@ -76,6 +76,31 @@ router.delete('/delete', async (req, res) => {
 });
 
 
+router.get("/detail/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const [result] = await db.query(
+      "SELECT id, name, type, description, price, photo, user_id FROM items WHERE id = ?",
+      [id]
+    );
+
+    if (result.length === 0) {
+      return res.status(404).json({ success: false, message: "Item not found." });
+    }
+
+
+    const itemWithBase64Image = {
+      ...result[0],
+      photo: result[0].photo ? Buffer.from(result[0].photo).toString("base64") : null,
+    };
+
+    res.status(200).json({ success: true, data: itemWithBase64Image });
+  } catch (err) {
+    console.error("Database error:", err);
+    res.status(500).json({ success: false, message: "Error fetching item details." });
+  }
+});
 
 
 module.exports = router;
