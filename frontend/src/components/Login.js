@@ -51,32 +51,41 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h2>Campus Marketplace</h2>
-
-
-        {error && <div className="error-message">{error}</div>}
-
-        <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
+        <div className="circle circle-one"></div>
+        <div className="form-container">
+          <img
+            src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png"
+            alt="illustration"
+            className="illustration"
           />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit">Login</button>
-        </form>
+          <h1 className="opacity">LOGIN</h1>
 
-        <p>
-          New here? <Link to="/signup">Sign Up</Link>
-        </p>
+          {error && <div className="error-message">{error}</div>}
+
+          <form onSubmit={handleLogin}>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button type="submit" className="opacity">Login</button>
+          </form>
+
+          <div className="register-forget opacity">
+            <p>New here? <Link to="/signup">Sign Up</Link></p>
+
+          </div>
+        </div>
+        <div className="circle circle-two"></div>
       </div>
     </div>
   );

@@ -53,43 +53,52 @@ function Signup() {
   return (
     <div className="signup-container">
       <div className="signup-box">
-        <h2>Create an Account</h2>
-
-
-        {error && <div className="error-message">{error}</div>}
-        {success && <div className="success-message">{success}</div>}
-
-        <form onSubmit={handleSignup}>
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
+        <div className="circle circle-one"></div>
+        <div className="form-container">
+          <img
+            src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png"
+            alt="illustration"
+            className="illustration"
           />
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit">Sign Up</button>
-        </form>
+          <h1 className="opacity">SIGN UP</h1>
 
-        <p>
-          Already have an account? <Link to="/">Login</Link>
-        </p>
+          {error && <div className="error-message">{error}</div>}
+          {success && <div className="success-message">{success}</div>}
+
+          <form onSubmit={handleSignup}>
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button type="submit" className="opacity">Sign Up</button>
+          </form>
+
+          <div className="register-forget opacity">
+            <p>Already have an account? <Link to="/">Login</Link></p>
+          </div>
+        </div>
+        <div className="circle circle-two"></div>
       </div>
     </div>
   );
 }
 
 export default Signup;
+

@@ -90,7 +90,7 @@ function Homepage() {
             <h3>{item.name}</h3>
             <p><strong>Type:</strong> {item.type}</p>
             <p>{item.description}</p>
-            <p><strong>Price:</strong> ₹{item.price}</p>
+            <p><strong>Price:</strong>  <span style={{ color: 'lime' }}> ₹{item.price}</span></p>
             <Link to={`/item/${item.id}`}>
               <button className="buy-now-button">Buy Now</button>
             </Link>
