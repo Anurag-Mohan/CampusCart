@@ -36,6 +36,21 @@
     opacity: 1;
   }
 }
+.navbar .search-bar {
+  display: flex;
+  align-items: center;
+  margin-left: auto; 
+  margin-right: 0px; 
+}
+
+.navbar .search-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #00ffff;
+  font-size: 1.5rem; 
+}
+
 
 .navbar a {
   margin: 0 15px;
@@ -98,8 +113,11 @@
 }
 
 .navbar h1{
-  font-size: 30px;
+  font-size: 25px;
+  flex-grow: 1; 
+
 }
+
 .homepage-container {
   padding: 20px;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
@@ -266,14 +284,15 @@
   height: 200px; 
   border-radius: 15px;
   object-fit: contain; 
-  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.05); 
+  filter: drop-shadow(0 -5px 15px #0b9092);
+  background-color: rgba(255, 255, 255, 0); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .recent-items img:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 6px 25px rgba(0, 255, 255, 0.8); 
+  transform: scale(1.05);
+  filter: drop-shadow(0 -5px 15px #0b923f); 
+
 }
 
 .item-info {
@@ -352,4 +371,24 @@
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 30px rgba(126, 145, 174, 0.6); 
 }
 
+
+
+.search-bar input {
+  width: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #0ba2b9;
+  border-radius: 10px;
+  background: transparent;
+  padding: 8px;
+  border-radius: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
+  color: white;
+}
+
+.search-bar.expanded input {
+  width: 200px;
+  opacity: 1;
+}
 

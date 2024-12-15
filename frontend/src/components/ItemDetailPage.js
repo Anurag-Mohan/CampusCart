@@ -21,9 +21,8 @@ function ItemDetailPage() {
   }, [id]);
 
   const handlePaymentClick = () => {
-    // Pass item price and details as state to the payment page
     navigate(`/payment/${id}`, {
-      state: { price: i.price, name: i.name }, // Pass the necessary details
+      state: { price: i.price, name: i.name },
     });
   };
 
