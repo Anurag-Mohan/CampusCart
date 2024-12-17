@@ -4,7 +4,7 @@
   <img src="https://github.com/Anurag-Mohan/CampusCart/blob/main/img/Banner.png" alt="Campus Marketplace Banner" width="200">
 </p>
 
-**Campus Marketplace** is a web platform built with **React, Node.js, and MySQL** that allows students to **buy, sell, and exchange products** within their campus. It provides a user-friendly experience, smart search options, and secure authentication.
+**Campus Marketplace** is a web platform built with **React, Node.js, and MySQL** that allows students to **buy and sell** within their campus. It provides a user-friendly experience, smart search options, and secure authentication.
 
 ---
 
@@ -12,8 +12,8 @@
 
 - 🛍️ **Product Listings**: Add, browse, and manage items for sale.  
 - 🔍 **Search Functionality**: Real-time search and filtering.  
-- 👤 **User Authentication**: Secure login and signup system.  
-- 📊 **Dashboard**: Manage user profiles, product listings, and favorites.  
+- 👤 **User Authentication**: Secure login and signup system.  3
+- 📊 **Admin Dashboard**: Manage user profiles, product listings, and favorites.  
 - 📦 **Dynamic Updates**: Reactively update product listings without page reloads.  
 - 💾 **Persistent Storage**: All data stored securely in MySQL.  
 
@@ -56,3 +56,10 @@ Follow these steps to set up the project locally:
    ```bash
    git clone https://github.com/yourusername/campus-marketplace.git
    cd campus-marketplace/backend
+
+
+2. Install dependencies:
+
+```bash
+Copy code
+npm install
