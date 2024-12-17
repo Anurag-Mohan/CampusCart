@@ -1,7 +1,7 @@
 # 🛒 **Campus Marketplace**
 
 <p align="center">
-  <img src="https://github.com/Anurag-Mohan/CampusCart/blob/main/img/Banner.png" alt="Campus Marketplace Banner" width="300">
+  <img src="https://github.com/Anurag-Mohan/CampusCart/blob/main/img/Banner.png" alt="Campus Marketplace Banner" width="200">
 </p>
 
 **Campus Marketplace** is a web platform built with **React, Node.js, and MySQL** that allows students to **buy, sell, and exchange products** within their campus. It provides a user-friendly experience, smart search options, and secure authentication.
