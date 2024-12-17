@@ -1,10 +1,10 @@
-# 🛒 **Campus Marketplace**
+# 🛒 **Campus Cart**
 
 <p align="center">
   <img src="https://github.com/Anurag-Mohan/CampusCart/blob/main/img/Banner.png" alt="Campus Marketplace Banner" width="200">
 </p>
 
-**Campus Marketplace** is a web platform built with **React, Node.js, and MySQL** that allows students to **buy and sell** within their campus. It provides a user-friendly experience, smart search options, and secure authentication.
+**Campus Cart** is a web platform built with **React, Node.js, and MySQL** that allows students to **buy and sell** within their campus. It provides a user-friendly experience, smart search options, and secure authentication.
 
 ---
 
@@ -60,6 +60,6 @@ Follow these steps to set up the project locally:
 
 2. Install dependencies:
 
-```bash
-Copy code
-npm install
+  ```bash
+  Copy code
+  npm install
