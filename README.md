@@ -1,7 +1,7 @@
 # 🛒 **Campus Marketplace**
 
 <p align="center">
-  <img src="https://github.com/Anurag-Mohan/CampusCart/blob/main/img/Banner.png" alt="Campus Marketplace Banner" width="500">
+  <img src="https://github.com/Anurag-Mohan/CampusCart/blob/main/img/Banner.png" alt="Campus Marketplace Banner" width="300">
 </p>
 
 **Campus Marketplace** is a web platform built with **React, Node.js, and MySQL** that allows students to **buy, sell, and exchange products** within their campus. It provides a user-friendly experience, smart search options, and secure authentication.
@@ -19,42 +19,30 @@
 
 ---
 
-
-
-## 🛠️ **Tech Stack**
+## 🎥 **Demo Video**
 
 <p align="center">
-  <table>
-    <tr>
-      <th>**Technology**</th>
-      <th>**Purpose**</th>
-    </tr>
-    <tr>
-      <td>⚛️ **React.js**</td>
-      <td>Frontend UI Development</td>
-    </tr>
-    <tr>
-      <td>🌐 **Node.js**</td>
-      <td>Backend Server</td>
-    </tr>
-    <tr>
-      <td>🐬 **MySQL**</td>
-      <td>Database Management</td>
-    </tr>
-    <tr>
-      <td>🔐 **JWT**</td>
-      <td>User Authentication</td>
-    </tr>
-    <tr>
-      <td>🎨 **CSS/Bootstrap**</td>
-      <td>UI Styling</td>
-    </tr>
-    <tr>
-      <td>🚀 **Express.js**</td>
-      <td>Backend API Framework</td>
-    </tr>
-  </table>
+  <video width="600" controls>
+    <source src="https://github.com/Anurag-Mohan/CampusCart/blob/main/img/React%20App%20-%20Google%20Chrome%202024-12-17%2021-13-50.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </p>
+
+---
+
+## 🛠️ **Tech Stack**
+<center>
+
+| **Technology**       | **Purpose**             |
+|-----------------------|-------------------------|
+| ⚛️ **React.js**       | Frontend UI Development |
+| 🌐 **Node.js**        | Backend Server          |
+| 🐬 **MySQL**          | Database Management     |
+| 🔐 **JWT**            | User Authentication     |
+| 🎨 **CSS/Bootstrap**  | UI Styling              |
+| 🚀 **Express.js**     | Backend API Framework   |
+
+</center>
 
 ---
 
